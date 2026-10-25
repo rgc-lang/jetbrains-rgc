@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>org.rgc.jetbrains</id>
+    <name>RGC Language Support</name>
+    <vendor email="rgc-lang@users.noreply.github.com" url="https://github.com/rgc-lang">rgc-lang</vendor>
+
+    <description><![CDATA[
+        <p>RGC language support for JetBrains IDEs.</p>
+        <ul>
+            <li>Registers the <code>.rg</code> file type and RGC language</li>
+            <li>Syntax highlighting is provided by the bundled TextMate grammar
+                (see the repository <code>textmate/</code> directory)</li>
+        </ul>
+        <p>This plugin is a starting point for a full LSP-based plugin
+        (completion, diagnostics, build/run actions). The RGC language server
+        is started as <code>rgc lsp --stdio</code>.</p>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType
+                name="RGC"
+                language="RGC"
+                extensions="rg"
+                fieldName="INSTANCE"
+                implementationClass="org.rgc.jetbrains.RgcFileType"/>
+    </extensions>
+</idea-plugin>

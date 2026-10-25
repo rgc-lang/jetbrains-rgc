@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>RGC</string>
+    <key>uuid</key>
+    <string>E4C4B9A0-6E1A-4F6B-9A62-RGC000000001</string>
+    <key>contactEmailRotated</key>
+    <string></string>
+    <key>mainMenu</key>
+    <dict/>
+    <key>semanticClass</key>
+    <string>source.rgc</string>
+    <key>source</key>
+    <string>source.rgc</string>
+    <key>scope</key>
+    <string>source.rgc</string>
+    <key>settings</key>
+    <dict>
+        <key>shellVariables</key>
+        <array>
+            <dict>
+                <key>name</key>
+                <string>TM_COMMENT_START</string>
+                <key>value</key>
+                <string># </string>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>TM_COMMENT_START_2</string>
+                <key>value</key>
+                <string>/*</string>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>TM_COMMENT_END_2</string>
+                <key>value</key>
+                <string>*/</string>
+            </dict>
+        </array>
+    </dict>
+</dict>
+</plist>
