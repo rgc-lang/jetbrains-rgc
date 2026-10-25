@@ -1,6 +1,7 @@
 # jetbrains-rgc plugin (skeleton)
 
-A minimal IntelliJ Platform plugin for RGC.
+A minimal IntelliJ Platform plugin for RGC, written in Java and built with the
+IntelliJ Platform Gradle Plugin 2.x.
 
 ## What works
 
@@ -22,13 +23,15 @@ Bundles).
 
 ## Build
 
+Requirements: JDK 17. Gradle 9 is provided by the wrapper.
+
 ```sh
 cd plugin
 ./gradlew buildPlugin
 ```
 
-Install `build/libs/jetbrains-rgc-*.zip` via
+Install `build/distributions/jetbrains-rgc-*.zip` via
 `Settings → Plugins → ⚙ → Install Plugin from Disk…`.
 
-Gradle and IntelliJ Platform versions in `build.gradle.kts` are pinned; update
-them when you adopt the skeleton.
+IntelliJ Platform and Gradle versions in `build.gradle.kts` / `gradle/wrapper`
+are pinned; update them when you adopt the skeleton.

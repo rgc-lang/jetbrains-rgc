@@ -13,7 +13,7 @@ cd plugin
 The installable plugin archive is produced at:
 
 ```
-plugin/build/libs/jetbrains-rgc-0.1.0.zip
+plugin/build/distributions/jetbrains-rgc-0.1.0.zip
 ```
 
 ## 2. Create a GitHub Release (optional but recommended)
@@ -22,7 +22,7 @@ Tag the repository (`v0.1.0`), then create a Release and attach the zip:
 
 ```sh
 gh release create v0.1.0 \
-  plugin/build/libs/jetbrains-rgc-0.1.0.zip \
+  plugin/build/distributions/jetbrains-rgc-0.1.0.zip \
   --title "jetbrains-rgc 0.1.0" \
   --notes "Initial release: RGC file type + TextMate grammar for JetBrains IDEs."
 ```

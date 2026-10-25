@@ -1,7 +1,6 @@
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "2.0.21"
-    id("org.jetbrains.intellij") version "1.17.4"
+    id("org.jetbrains.intellij.platform") version "2.19.0"
 }
 
 group = "org.rgc"
@@ -9,25 +8,29 @@ version = "0.1.0"
 
 repositories {
     mavenCentral()
-}
-
-dependencies {
-    testImplementation("junit:junit:4.13.2")
-}
-
-intellij {
-    version.set("2024.2.2")   // IntelliJ IDEA 2024.2.2 (build 242)
-    type.set("IC")            // IntelliJ IDEA Community Edition
-    plugins.set(listOf("com.intellij.modules.platform"))
-}
-
-tasks {
-    patchPluginXml {
-        sinceBuild.set("242")
-        untilBuild.set("")
+    intellijPlatform {
+        defaultRepositories()
     }
 }
 
-kotlin {
-    jvmToolchain(17)
+dependencies {
+    intellijPlatform {
+        intellijIdeaCommunity("2024.2.2")
+    }
+    testImplementation("junit:junit:4.13.2")
+}
+
+intellijPlatform {
+    pluginConfiguration {
+        version = "0.1.0"
+        ideaVersion {
+            sinceBuild = "242"
+        }
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }

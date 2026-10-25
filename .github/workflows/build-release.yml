@@ -27,5 +27,5 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: plugin/build/libs/jetbrains-rgc-*.zip
+          files: plugin/build/distributions/jetbrains-rgc-*.zip
           generate_release_notes: true
